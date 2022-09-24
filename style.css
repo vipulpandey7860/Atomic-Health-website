@@ -1,0 +1,940 @@
+@font-face {
+    font-family: 'GT super';
+    src: url("./fonts/62857b8fe2b510e7d7a452c8_GT-Super-Text-Book-Italic.ttf");
+}
+
+@font-face {
+    font-family: "Work sans";
+    src: url("./fonts/QGYsz_wNahGAdqQ43Rh_fKDp.ttf");
+}
+
+@font-face {
+    font-family: "ink trap";
+    src: url("./fonts/62857b8fe2b510e426a452e3_ABCWhyteInktrap-Book\ \(1\).ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: "Ink Trap";
+
+}
+
+#loader {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    z-index: 1000000;
+    overflow: hidden;
+
+}
+
+#loader>h3 {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    color: #010DBF;
+    font-weight: 500;
+
+}
+
+
+
+#movingcircle {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    z-index: 10;
+    background-color: rgba(12, 165, 192, 0.982);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
+
+}
+
+
+#navbar2 {
+    position: absolute;
+    top: 12%;
+    height: 20vh;
+    width: 100vw;
+    justify-content: space-between;
+    display: flex;
+    padding: 0 9vw;
+
+}
+
+#navbar2>h2 {
+    font-size: 2.9vw;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+
+#circle:hover {
+
+    background-color: rgba(240, 249, 255, 0.242);
+}
+
+#circle2:hover {
+
+    background-color: rgba(240, 249, 255, 0.242);
+}
+
+#circle2 {
+    position: relative;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+    border: solid #00FBFF 2px;
+    align-items: center;
+    z-index: 9;
+}
+
+#circle2>i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 9;
+    font-size: 2vw;
+
+
+}
+
+
+#leftslide {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #010DBF;
+    left: -100%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    z-index: 9;
+
+
+}
+
+
+#leftslidetext {
+
+    position: relative;
+    left: 10%;
+    top: 30%;
+    height: 70vh;
+    width: 60vw;
+    z-index: 9;
+}
+
+#leftslidetext>h2 {
+    position: relative;
+    color: white;
+    font-size: 8vw;
+    font-weight: 350;
+    overflow: hidden;
+    line-height: 20vh;
+}
+
+#leftslidetext>h2>span {
+    font-style: italic;
+    font-family: 'gt super';
+}
+
+
+#page1 {
+    position: relative;
+    width: 100vw;
+    background-color: #010DBF;
+    display: flex;
+    overflow: hidden;
+
+}
+
+#navbar {
+    position: absolute;
+    top: 12%;
+    height: 20vh;
+    width: 100vw;
+    justify-content: space-between;
+    display: flex;
+    padding: 0 9vw;
+    z-index: 10;
+
+}
+
+#circle {
+    position: relative;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+    border: solid #00FBFF 2px;
+    align-items: center;
+    z-index: 9;
+}
+
+#navbar>h2 {
+    font-size: 2.9vw;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+
+#circle>h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 9;
+    font-size: 1vw;
+
+}
+
+#left {
+
+    position: relative;
+    margin-top: 30vh;
+    left: 0;
+    height: 70vh;
+    width: 60vw;
+    z-index: 9;
+    padding-left: 9vw;
+
+}
+
+#left>h2 {
+    position: relative;
+    color: white;
+    font-size: 9vw;
+    font-weight: 350;
+    overflow: hidden;
+    line-height: 20vh;
+
+}
+
+#left>h2:nth-child(2) {
+    font-style: italic;
+    font-family: 'gt super';
+}
+
+#left>h2:nth-child(3) {
+    overflow: visible;
+}
+
+#right {
+
+    position: relative;
+    height: 100vh;
+    width: 50vw;
+
+}
+
+#headervideo {
+    position: absolute;
+    height: 660px;
+    width: auto;
+    left: -101%;
+
+}
+
+#page2 {
+    position: relative;
+    width: 100vw;
+    color: white;
+    padding: 25vh 7vw;
+
+}
+
+#page2>h1 {
+    position: relative;
+    color: #010DBF;
+    font-weight: 500;
+    font-size: 4.2vw;
+    line-height: 70px;
+    display: inline-block;
+    overflow: hidden;
+
+}
+
+#page2>h1>span {
+    font-style: italic;
+    font-family: 'gt super';
+
+}
+
+.images {
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+    cursor: pointer;
+}
+
+#page3 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    overflow: hidden;
+
+}
+
+#imgpage3 {
+    position: absolute;
+    height: 80vh;
+    width: 80vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 20px;
+    backface-visibility: hidden;
+
+}
+
+#imgpage3>img {
+    height: 80vh;
+    width: 80vw;
+    position: absolute;
+    object-fit: cover;
+    border-radius: 20px;
+    object-position: center;
+}
+
+#imgpage3>h5 {
+    position: relative;
+    margin-top: 45vh;
+    margin-left: 5vw;
+    font-size: 1.5vw;
+    overflow: hidden;
+}
+
+#imgpage3>h3 {
+    position: relative;
+    margin-left: 5vw;
+    font-size: 2vw;
+    overflow: hidden;
+
+}
+
+#page4 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    overflow: hidden;
+
+}
+
+#imgpage4 {
+    position: absolute;
+    height: 80vh;
+    width: 80vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 20px;
+    backface-visibility: hidden;
+
+}
+
+#imgpage4>img {
+    height: 80vh;
+    width: 80vw;
+    position: absolute;
+    object-fit: cover;
+    border-radius: 20px;
+    object-position: center;
+}
+
+#imgpage4>h5 {
+    position: relative;
+    margin-top: 45vh;
+    margin-left: 5vw;
+    font-size: 1.5vw;
+    overflow: hidden;
+
+}
+
+#imgpage4>h3 {
+    position: relative;
+    margin-left: 5vw;
+    font-size: 2vw;
+    overflow: hidden;
+
+}
+
+#page5 {
+    position: relative;
+    width: 100vw;
+    color: white;
+    padding: 20vh 10vw;
+
+}
+
+#page5>h1 {
+    position: relative;
+    color: #010DBF;
+    font-weight: 400;
+    font-size: 3.2vw;
+    overflow: hidden;
+
+}
+
+#page5>h1>span {
+    font-style: italic;
+    font-family: 'gt super';
+}
+
+
+#txtarrow {
+    position: relative;
+    margin-top: 10vh;
+    height: 20vh;
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#txtarrow>h3 {
+    font-weight: 600;
+    font-size: 2.3vw;
+    cursor: pointer;
+    color: #010DBF;
+    overflow: hidden;
+
+
+}
+
+#txtarrow h4 i {
+    font-size: 6vw;
+    color: #C431BA;
+    font-weight: 300;
+    overflow: hidden;
+
+}
+
+
+#page6 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    overflow: hidden;
+
+}
+
+#imgpage6 {
+    position: absolute;
+    height: 80vh;
+    width: 80vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 20px;
+    backface-visibility: hidden;
+
+}
+
+#imgpage6>img {
+    height: 80vh;
+    width: 80vw;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+
+}
+
+#imgpage6>h5 {
+    position: relative;
+    margin-top: 45vh;
+    margin-left: 5vw;
+    font-size: 1.5vw;
+    color: #5B9AFF;
+    overflow: hidden;
+
+}
+
+#imgpage6>h3 {
+    position: relative;
+    margin-left: 5vw;
+    font-size: 2vw;
+    overflow: hidden;
+    color: #5B9AFF;
+}
+
+#page7 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    overflow: hidden;
+
+}
+
+#imgpage7 {
+    position: absolute;
+    height: 80vh;
+    width: 80vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 20px;
+    backface-visibility: hidden;
+
+
+}
+
+#imgpage7>img {
+    height: 80vh;
+    width: 80vw;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+
+}
+
+#imgpage7>h5 {
+    position: relative;
+    margin-top: 45vh;
+    margin-left: 5vw;
+    font-size: 1.5vw;
+    color: #35215E;
+    overflow: hidden;
+
+}
+
+#imgpage7>h3 {
+    position: relative;
+    margin-left: 5vw;
+    font-size: 2vw;
+    color: #35215E;
+    overflow: hidden;
+
+}
+
+
+#page8 {
+    position: relative;
+    width: 100vw;
+    color: white;
+    padding: 10vh 10vw;
+
+}
+
+#page8>h1 {
+    position: relative;
+    color: #010DBF;
+    font-weight: 500;
+    font-size: 2.6vw;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+#page8>h1>span {
+    font-style: italic;
+    font-family: 'gt super';
+}
+
+#menubar {
+    position: relative;
+    height: 60vh;
+    margin-top: 5vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu {
+    position: relative;
+    height: 40vh;
+    width: 30vw;
+    font-family: 'gilroy';
+    font-size: 1.8vw;
+    line-height: 50px;
+    color: #010DBF;
+
+}
+
+.menu>h3 {
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+#menu1>h3:nth-child(1) {
+    color: #C431BA;
+}
+
+#menu2>h3:nth-child(1) {
+    color: #C431BA;
+}
+
+#menu3>h3:nth-child(1) {
+    color: #C431BA;
+}
+
+
+#page9 {
+    position: relative;
+    width: 100vw;
+
+}
+
+#partdiv {
+    position: relative;
+    width: 100vw;
+    background-color: #010DBF;
+    border-radius: 7vw 7vw 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#items {
+    position: relative;
+    padding: 10vh 10vw;
+
+}
+
+#items>h3 {
+    position: relative;
+    font-size: 3.2vw;
+    color: white;
+    font-weight: 200;
+    margin: 15px;
+}
+
+#items>h3:nth-child(2) {
+
+    position: relative;
+    font-size: 8vw;
+    color: white;
+    font-weight: 400;
+}
+
+
+#items>h3:nth-child(3) {
+    position: relative;
+    font-size: 2.5vw;
+    color: #00FBFF;
+    font-weight: 200;
+    line-height: 50px;
+}
+
+#items>h3:nth-child(4) {
+    position: relative;
+    font-size: 2vw;
+    color: white;
+    font-weight: 200;
+}
+
+#footervideo {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding-right: 7vw;
+}
+
+
+@media only screen and (max-width: 500px) {
+
+    #movingcircle {
+        display: none;
+    }
+
+    #loader {
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+    }
+
+    #navbar2 {
+        height: 10vh;
+    }
+
+    #navbar2>h2 {
+        font-size: 5vw;
+    }
+
+    #circle2 {
+        height: 13vw;
+        width: 13vw;
+    }
+
+    #circle2>i{
+        font-size: 7vw;
+    }
+
+    #leftslidetext {
+        width: 90vw;
+    }
+
+    #leftslidetext>h2 {
+        font-size: 11vw;
+        line-height: initial;
+        overflow: initial;
+
+    }
+
+    #navbar {
+        height: 10vh;
+    }
+
+    #navbar>h2 {
+        font-size: 5vw;
+    }
+
+    #circle {
+        height: 13vw;
+        width: 13vw;
+    }
+
+    #circle>h3 {
+        font-size: 2.5vw;
+    }
+
+    #left {
+        width: 100vw;
+    }
+
+    #left>h2 {
+        font-size: 17vw;
+        line-height: initial;
+        overflow: initial;
+
+    }
+
+    #right {
+        position: absolute;
+        right: 0;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    #headervideo {
+        height: 100vh;
+        width: auto;
+        top: 0%;
+        left: -390%;
+    }
+
+    #page2 {
+
+        padding: 20vh 2vw 5vh 5vw;
+    }
+
+    #page2>h1 {
+        font-size: 8vw;
+        line-height: initial;
+        display: contents;
+    }
+
+    #page3 {
+        height: 60vh;
+    }
+
+    #imgpage3 {
+        height: 40vh;
+        width: 92vw;
+    }
+
+    #imgpage3>img {
+        height: 50vh;
+        width: 100%;
+
+    }
+
+    #imgpage3>h5 {
+        margin-top: 20vh;
+        font-size: 4.5vw;
+    }
+
+    #imgpage3>h3 {
+        font-size: 5vw;
+    }
+
+    #page4 {
+        height: 60vh;
+    }
+
+    #imgpage4 {
+        height: 40vh;
+        width: 92vw;
+    }
+
+    #imgpage4>img {
+        height: 50vh;
+        width: 100%;
+
+    }
+
+    #imgpage4>h5 {
+        margin-top: 20vh;
+        font-size: 4.5vw;
+        color: #00FBFF;
+    }
+
+    #imgpage4>h3 {
+        font-size: 5vw;
+        color: #00FBFF;
+
+    }
+
+    #page5 {
+        padding: 10vh 6vw 6vw 3vh;
+    }
+
+    #page5>h1 {
+        font-size: 8.2vw;
+        display: contents;
+    }
+
+    #txtarrow {
+        margin-top: initial;
+        width: 44vw;
+    }
+
+    #txtarrow>h3 {
+        font-size: 4.3vw;
+    }
+
+    #txtarrow h4 i {
+        font-size: 9vw;
+    }
+
+
+    #page6 {
+        height: 60vh;
+    }
+
+    #imgpage6 {
+        height: 40vh;
+        width: 92vw;
+    }
+
+    #imgpage6>img {
+        height: 50vh;
+        width: 100%;
+
+    }
+
+    #imgpage6>h5 {
+        margin-top: 20vh;
+        font-size: 4.5vw;
+        color: #00FBFF;
+    }
+
+    #imgpage6>h3 {
+        font-size: 5vw;
+        color: #00FBFF;
+
+    }
+
+    #page7 {
+        height: 60vh;
+    }
+
+    #imgpage7 {
+        height: 40vh;
+        width: 92vw;
+    }
+
+    #imgpage7>img {
+        height: 50vh;
+        width: 100%;
+
+    }
+
+    #imgpage7>h5 {
+        margin-top: 20vh;
+        font-size: 4.5vw;
+        color: #00FBFF;
+    }
+
+    #imgpage7>h3 {
+        font-size: 5vw;
+        color: #00FBFF;
+
+    }
+
+    #page8 {
+        padding: 10vh 3vw;
+        height: 67vh;
+    }
+
+    #page8>h1 {
+        font-size: 5.5vw;
+        display: contents;
+        padding-left: 10vw;
+    }
+
+    #partdiv {
+        height: 52vh;
+    }
+
+    #menubar {
+        margin-top: initial;
+        height: 15vh;
+    }
+
+    .menu {
+        font-size: 3vw;
+        line-height: 30px;
+        height: 0vh;
+    }
+
+    #items {
+        padding: 10vh 3vw 6vh 4vw;
+    }
+
+    #items>h3 {
+        font-size: 6vw;
+    }
+
+    #items>h3:nth-child(2) {
+        font-size: 11vw;
+    }
+
+    #items>h3:nth-child(3) {
+        font-size: 4.5vw;
+    }
+
+    #items>h3:nth-child(4) {
+        font-size: 4.5vw;
+    }
+
+    #footervideo {
+        position: absolute;
+        height: 125px;
+        width: 200px;
+        right: -12%;
+        top: 17%;
+    }
+
+}
