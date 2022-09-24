@@ -687,7 +687,7 @@ body {
         width: 13vw;
     }
 
-    #circle2>i{
+    #circle2>i {
         font-size: 7vw;
     }
 
@@ -738,10 +738,10 @@ body {
     }
 
     #headervideo {
-        height: 75vh;
+        height: 101vh;
         width: auto;
         top: 0%;
-        left: -390%;
+        left: -488%;
     }
 
     #page2 {
@@ -894,7 +894,7 @@ body {
         padding-left: 10vw;
     }
 
-   
+
 
     #menubar {
         margin-top: initial;
@@ -927,14 +927,9 @@ body {
         font-size: 4.5vw;
     }
 
-    #page9{
-        height: 60vh;
-    }
-
     #partdiv {
-        height: 52vh;
-        height: 42vh;
-    top: -20%;
+        height: 55vh;
+         top: -20%;
     }
 
     #footervideo {
