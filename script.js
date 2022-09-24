@@ -150,7 +150,7 @@ function ImageAnimation() {
         trigger: images[i],
         scroller: "#main",
         start: "top 80%",
-        end: "top 10%",
+        end: "top 30%",
         scrub: .2,
       
       },
