@@ -150,8 +150,9 @@ function ImageAnimation() {
         trigger: images[i],
         scroller: "#main",
         start: "top 80%",
-        end: "top 0%",
-        scrub: 4,
+        end: "top 10%",
+        scrub: .2,
+      
       },
       rotateX: '90deg',
       duration: 3,
