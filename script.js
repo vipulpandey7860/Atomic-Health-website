@@ -49,19 +49,21 @@ function openClose() {
   leftslide.addEventListener("click", function () {
 
     document.querySelector("#leftslide").style.left = '0%';
+    document.querySelector("#leftslide").style.zIndex = '999999';
+
 
     gsap.from("#leftslidetext>h2", {
-      opacity:0,
+      opacity: 0,
       y: '30',
       yoyo: true,
       repeat: 2,
       delay: 0.1,
-  
+
       onStart: function () {
-  
+
         $('#leftslidetext>h2').textillate({ in: { effect: 'fadeInUp' } });
       }
-  
+
     })
 
   });
@@ -133,7 +135,7 @@ function TextAnimation() {
     }
 
   })
- 
+
 }
 
 function ImageAnimation() {
@@ -175,14 +177,30 @@ function loader() {
 
 
 }
-show();
+// show();
+// loader();
+// cursorMovingAnimation();
+// openClose();
+// ImageAnimation();
+// TextAnimation();
+// ImageMouseAnimation();
+
+if(window.innerWidth <= 600){
+  // load mobile script
+loader();
+openClose();
+
+}
+else{ // viewportWidth width > 600
+  // load desktop script
+  show();
 loader();
 cursorMovingAnimation();
 openClose();
-TextAnimation();
 ImageAnimation();
+TextAnimation();
 ImageMouseAnimation();
-
+}
 
 
 
