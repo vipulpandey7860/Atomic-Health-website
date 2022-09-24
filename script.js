@@ -177,13 +177,6 @@ function loader() {
 
 
 }
-// show();
-// loader();
-// cursorMovingAnimation();
-// openClose();
-// ImageAnimation();
-// TextAnimation();
-// ImageMouseAnimation();
 
 if(window.innerWidth <= 600){
   // load mobile script
