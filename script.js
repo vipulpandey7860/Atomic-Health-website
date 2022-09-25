@@ -179,10 +179,54 @@ function loader() {
 
 }
 
+
+function MobileImageAnimation(){
+
+  var images = document.querySelectorAll(".images");
+
+  for (let i = 0; i < images.length; i++) {
+
+    gsap.from(images[i], {
+
+      scrollTrigger: {
+        trigger: images[i],
+        scroller: "body",
+        markers:true,
+      
+      },
+      rotateX: '90deg',
+      duration: 3,
+
+    })
+
+  }
+
+}
+
+function MobileTextAnimation(){
+  gsap.from("#left>h2", {
+    y: '30',
+    yoyo: true,
+    repeat: 2,
+    delay: 1,
+
+    onStart: function () {
+
+      $('#left>h2').textillate({ in: { effect: 'fadeInUp' } });
+    }
+
+  })
+
+}
+
 if(window.innerWidth <= 600){
   // load mobile script
+  show();
 loader();
 openClose();
+MobileImageAnimation();
+MobileTextAnimation();
+
 
 }
 else{ // viewportWidth width > 600
