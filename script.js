@@ -180,56 +180,56 @@ function loader() {
 }
 
 
-function MobileImageAnimation() {
+// function MobileImageAnimation() {
 
-  var images = document.querySelectorAll(".images");
+//   var images = document.querySelectorAll(".images");
 
-  for (let i = 0; i < images.length; i++) {
+//   for (let i = 0; i < images.length; i++) {
 
-    gsap.from(images[i], {
+//     gsap.from(images[i], {
 
-      scrollTrigger: {
-        trigger: images[i],
-        scroller: "body",
+//       scrollTrigger: {
+//         trigger: images[i],
+//         scroller: "body",
 
-      },
-      rotateX: '90deg',
-      duration: 2,
+//       },
+//       rotateX: '90deg',
+//       duration: 2,
 
-    })
+//     })
 
-  }
+//   }
 
-}
+// }
 
-function MobileTextAnimation() {
-  gsap.from("#left>h2", {
-    y: '30',
-    yoyo: true,
-    repeat: 2,
-    delay: 1,
+// function MobileTextAnimation() {
+//   gsap.from("#left>h2", {
+//     y: '30',
+//     yoyo: true,
+//     repeat: 2,
+//     delay: 1,
 
-    onStart: function () {
+//     onStart: function () {
 
-      $('#left>h2').textillate({ in: { effect: 'fadeInUp' } });
-    }
+//       $('#left>h2').textillate({ in: { effect: 'fadeInUp' } });
+//     }
 
-  })
+//   })
 
-}
+// }
 
-if (window.innerWidth <= 600) {
+// if (window.innerWidth <= 600) {
   // load mobile script
   // show();
-  loader();
-  openClose();
-  MobileImageAnimation();
-  MobileTextAnimation();
-  ImageMouseAnimation();
+  // loader();
+  // openClose();
+  // MobileImageAnimation();
+  // MobileTextAnimation();
+  // ImageMouseAnimation();
 
 
-}
-else { // viewportWidth width > 600
+// }
+// else { // viewportWidth width > 600
   // load desktop script
   show();
   loader();
@@ -238,7 +238,7 @@ else { // viewportWidth width > 600
   ImageAnimation();
   TextAnimation();
   ImageMouseAnimation();
-}
+// }
 
 
 
