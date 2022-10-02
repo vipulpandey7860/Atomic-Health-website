@@ -191,7 +191,6 @@ function MobileImageAnimation() {
       scrollTrigger: {
         trigger: images[i],
         scroller: "body",
-        scrub:true,
 
       },
       rotateX: '90deg',
