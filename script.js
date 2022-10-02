@@ -152,7 +152,7 @@ function ImageAnimation() {
         start: "top 80%",
         end: "top 30%",
         scrub: .2,
-      
+
       },
       rotateX: '90deg',
       duration: 3,
@@ -180,7 +180,7 @@ function loader() {
 }
 
 
-function MobileImageAnimation(){
+function MobileImageAnimation() {
 
   var images = document.querySelectorAll(".images");
 
@@ -191,7 +191,7 @@ function MobileImageAnimation(){
       scrollTrigger: {
         trigger: images[i],
         scroller: "body",
-      
+
       },
       rotateX: '90deg',
       duration: 3,
@@ -202,7 +202,7 @@ function MobileImageAnimation(){
 
 }
 
-function MobileTextAnimation(){
+function MobileTextAnimation() {
   gsap.from("#left>h2", {
     y: '30',
     yoyo: true,
@@ -218,25 +218,27 @@ function MobileTextAnimation(){
 
 }
 
-if(window.innerWidth <= 600){
+if (window.innerWidth <= 600) {
   // load mobile script
-  show();
-loader();
-openClose();
-MobileImageAnimation();
-MobileTextAnimation();
+  // show();
+  loader();
+  openClose();
+  MobileImageAnimation();
+  MobileTextAnimation();
+  ImageMouseAnimation();
+  cursorMovingAnimation();
 
 
 }
-else{ // viewportWidth width > 600
+else { // viewportWidth width > 600
   // load desktop script
   show();
-loader();
-cursorMovingAnimation();
-openClose();
-ImageAnimation();
-TextAnimation();
-ImageMouseAnimation();
+  loader();
+  cursorMovingAnimation();
+  openClose();
+  ImageAnimation();
+  TextAnimation();
+  ImageMouseAnimation();
 }
 
 
