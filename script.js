@@ -22,6 +22,7 @@ function show() {
   });
 
 
+
   // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
@@ -102,7 +103,7 @@ function ImageMouseAnimation() {
 
 }
 
-function TextAnimation() {
+function TextAnimation() {  
 
   var AnimateIt = document.querySelectorAll(".txts");
 
@@ -113,6 +114,7 @@ function TextAnimation() {
         trigger: AnimateIt[i],
         scroller: "#main",
         start: "top 80%",
+        // markers:true
 
       },
       y: '40',
@@ -190,7 +192,7 @@ function MobileImageAnimation() {
 
       scrollTrigger: {
         trigger: images[i],
-        scroller: "body",
+        scroller: "#main",
         // markers:true,  
 
       },
@@ -204,6 +206,28 @@ function MobileImageAnimation() {
 }
 
 function MobileTextAnimation() {
+
+
+  var AnimateIt = document.querySelectorAll(".txts");
+
+  for (let i = 0; i < AnimateIt.length; i++) {
+    gsap.from(AnimateIt[i], {
+
+      scrollTrigger: {
+        trigger: AnimateIt[i],
+        scroller: "#main",
+        start: "top 80%",
+        markers:true
+
+      },
+      y: '40',
+      autoAlpha: 0,
+      stagger: 0.5,
+
+    })
+
+  }
+
   gsap.from("#left>h2", {
     y: '30',
     yoyo: true,
@@ -224,9 +248,10 @@ if (window.innerWidth <= 500) {
   show();
   loader();
   openClose();
-  // MobileImageAnimation();
-  // MobileTextAnimation();
+  MobileImageAnimation();
+  MobileTextAnimation();
   ImageMouseAnimation();  
+
 
 
 }
