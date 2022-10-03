@@ -224,8 +224,8 @@ if (window.innerWidth <= 500) {
   show();
   loader();
   openClose();
-  MobileImageAnimation();
-  MobileTextAnimation();
+  // MobileImageAnimation();
+  // MobileTextAnimation();
   ImageMouseAnimation();  
 
 
