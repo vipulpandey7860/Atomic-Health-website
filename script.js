@@ -193,7 +193,7 @@ function MobileImageAnimation() {
       scrollTrigger: {
         trigger: images[i],
         scroller: "body",
-        // markers:true,  
+        markers:true,  
 
       },
       rotateX: '90deg',
@@ -245,7 +245,7 @@ function MobileTextAnimation() {
 
 if (window.innerWidth <= 500) {
   // load mobile script
-  show();
+  // show();  
   loader();
   openClose();
   MobileImageAnimation();
