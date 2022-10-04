@@ -671,7 +671,7 @@ body {
 
 
     html,body{
-        position: absolute;
+        position: relative;
     }
 
     #movingcircle {
