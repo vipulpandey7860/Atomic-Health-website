@@ -669,6 +669,11 @@ body {
 
 @media only screen and (max-width: 500px) {
 
+
+    html,body{
+        position: absolute;
+    }
+
     #movingcircle {
         display: none;
     }

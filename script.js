@@ -192,7 +192,7 @@ function MobileImageAnimation() {
 
       scrollTrigger: {
         trigger: images[i],
-        scroller: "#main",
+        scroller: "body",
         // markers:true,  
 
       },
@@ -215,9 +215,9 @@ function MobileTextAnimation() {
 
       scrollTrigger: {
         trigger: AnimateIt[i],
-        scroller: "#main",
+        scroller: "body",
         start: "top 80%",
-        markers:true
+        // markers:true
 
       },
       y: '40',
