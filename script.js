@@ -197,7 +197,6 @@ function MobileImageAnimation() {
 
       },
       rotateX: '90deg',
-      duration: 2,
 
     })
 
