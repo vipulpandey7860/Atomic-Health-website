@@ -30,8 +30,9 @@ body {
 }
 
 #main{
-    position: relative;
+    position: absolute;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 #loader {
@@ -669,9 +670,10 @@ body {
 
 @media only screen and (max-width: 500px) {
 
-    #main{
+    /* #main{
         position: absolute;
-    }
+    } */
+
     #movingcircle {
         display: none;
     }
