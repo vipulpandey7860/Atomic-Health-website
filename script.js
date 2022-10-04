@@ -192,7 +192,7 @@ function MobileImageAnimation() {
 
       scrollTrigger: {
         trigger: images[i],
-        scroller: "body",
+        scroller: "#main",
         // markers:true,  
 
       },
@@ -214,7 +214,7 @@ function MobileTextAnimation() {
 
       scrollTrigger: {
         trigger: AnimateIt[i],
-        scroller: "body",
+        scroller: "#main",
         start: "top 80%",
         // markers:true
 
@@ -244,7 +244,7 @@ function MobileTextAnimation() {
 
 if (window.innerWidth <= 500) {
   // load mobile script
-  // show();  
+  show();  
   loader();
   openClose();
   MobileImageAnimation();
